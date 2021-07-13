@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/******************** 1024px 이하 *****************/
+@media only screen and (max-width:1024px) {
+	/* 컨텐츠박스 타이틀 h2 */
+	.pbx h2 {
+		font-size: 24px;
+	}
+}
+
+/********************* 500px 이하 *********************/
+@media only screen and (max-width:500px) {
+	body {
+		padding-top: 56px;
+		background-color: #000;
+	}
+	#top {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: #fff;
+		z-index: 999;
+	}
+	/* 상단영역 최소높이 없애기 */
+	.top.ibx {
+		min-height: auto;
+	}
+	/* 상단메뉴 GNB 없애기 */
+	.tmenu, .gnb {
+		display: none;
+	}
+	/* 로고박스 */
+	.logo {
+		padding: 10px;
+	}
+	/* 로고이미지  */
+	.logo img {
+		width: 130px;
+	}
+
+	/* 컨텐츠박스 타이틀 h2 */
+	.pbx h2 {
+		font-size: 24px;
+	}
+	/* 컨텐츠박스 유형1 비율변경  */
+	.st1.rbx::before {
+		padding-top: 150.7%;
+	}
+	/* 컨텐츠박스 유헝3 비율변경 */
+	.st3.rbx::before {
+		padding-top: 75%;
+	}
+	/* 유형1 박스 이미지 변경 */
+	.bgi1 {
+		background-image: url(../images/cont1b.jpg);
+	}
+	.bgi3 {
+		background-image: url(../images/cont3b.jpg);
+	}
+	.bgi5 {
+		background-image: url(../images/cont5b.jpg);
+	}
+	/* 유형3의 3번째박스 숨기기 */
+	.st3 .pbx:last-child {
+		display: none;
+	}
+	/* 컨텐츠박스 보더 트랜지션 없애기 */
+	.pbx::after {
+		transition: none;
+	}
+	/* 컨텐츠박스 오버 시 보더두께 변경 */
+	.st1 .pbx:hover::after {
+		border: 15px solid #f00;
+	}
+	.st3 .pbx:hover::after {
+		border: 10px solid #f00;
+	}
+
+	/* 하단박스  */
+	.info.ibx {
+		padding: 40px;
+		min-height: auto;
+	}
+
+	.blogo img {
+		width: 200px;
+	}
+
+}
+
